@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+<div class="container">
+  <h1 class="display-3">Hazardous Near Earth Objects</h1>
+  <p class="pt-3">The list below shows every object near earth that will pass by within the next 7 days that are considered hazardous to Earth.  For each object you will find a couple pieces of data.  You will find the name and date of when it will pass Earth, the distance it is expected to miss Earth by and the velocity that it is traveling.</p>
+  <p>The objects are ordered by the closest distance to earth to the furthest distance</p>
+</div>
+</div>
+
+<div class="container">
+	<div class="row justify-content-center animated slideInUp">
+		{% for i in form_hazard_data %}
+		<div class="col-md-4 col-sm-12 col-xs-12 p-5 border rounded m-3 shadow-sm">
+			{% if i[6] == None %}
+			<h5>Date Unknown</h5>
+			{% else %}
+			<h5>{{ i[6] }}</h5>
+			{% endif %}
+			<p>Name: {{ i[1] }}</p>
+			<p>Miss Distance: {{ i[0]|round(2) }} miles</p>
+			<p>Velocity: {{ i[5]|round(2) }} m/s</p>
+		</div>
+{% endfor %}
+</div>
+</div>
+
+{% endblock content %}

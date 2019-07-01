@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Most Recent Earth Photo From EPIC</h1>
+          <p class="pt-3">The EPIC API provides information on the daily imagery collected by DSCOVR's Earth Polychromatic Imaging Camera (EPIC) instrument. Uniquely positioned at the Earth-Sun Lagrange point, EPIC provides full disc imagery of the Earth</p>
+        </div>
+      </div>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-8 col-sm-12 col-xs-12 p-4 rounded m-3 text-center" >
+      <h3 class="font-weight-light pb-4 animated bounceInLeft">{{ month }} {{ day }}, {{ year }}</h3>
+      <div class="responsive animated bounceInRight">
+			<img src="/static/images/epic.jpg" alt="daily epic earth photo" class="rounded" height="540", width="540" />
+    </div>
+      <div class="animated bounceInUp">
+      <p class=pt-5>{{ text }}</p>
+      <p>Latitude: {{ lat }}  |  Longitude: {{ lon }}</p>
+      <p></p>
+		</div>
+  </div>
+</div>
+</div>
+{% endblock content %}

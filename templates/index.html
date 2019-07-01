@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">NASA API Data</h1>
+          <p class="pt-3">Listed below are different pieces of data that has come from information released by Nasa's APIs.  You'll find data on near earth objects as well as the most recent picture of earth taken by DSCOVR's EPIC instrument!</p>
+        </div>
+      </div>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-5 col-sm-12 col-xs-12 p-4 border rounded m-3 shadow-sm animated bounceInLeft">
+			<h3 class="text-center">Hazardous Near Earth Objects</h3>
+			<h5 class="text-center pb-3">Closest Miss To Earth (Next 7 Days):</h5>
+			{% if closest[6] == None %}
+			<p><strong>Date Unknown</strong></p>
+			{% else %}
+			<p><strong>{{ closest[6] }}</strong></p>
+			{% endif %}
+			<p>Name: {{ closest[1] }}</p>
+			<p>Miss Distance: {{ closest[0]|round(2) }} miles</p>
+			<p>Velocity: {{ closest[5]|round(2) }} m/s</p>
+			<a href="/hazard-list" class="text-dark">All Hazardous Near Earth Objects</a>
+		</div>
+
+		<div class="col-md-5 col-sm-12 col-xs-12 p-4 border rounded m-3 pt-5 shadow-sm animated bounceInRight">
+			<h3 class="text-center">EPIC Earth Photo</h3>
+			<a href="/epic"><p class="text-center text-dark">Link to most recent photo taken by EPIC</p></a>
+		</div>
+		</div>
+{% endblock content %}

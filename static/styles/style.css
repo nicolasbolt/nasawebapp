@@ -1,0 +1,13 @@
+.nav-padding {
+	margin-top: 5rem;
+}
+
+.bg-color {
+	background-color: #e9ecef;
+}
+
+.responsive {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
