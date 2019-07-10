@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">NASA API Data</h1>
-          <p class="pt-3">Listed below are different pieces of data that has come from information released by Nasa's APIs.  You'll find data on near earth objects as well as the most recent picture of earth taken by DSCOVR's EPIC instrument!</p>
+        <div class="container nav-padding content">
+        	<div class="row">
+        		<div class="col-md-12">
+          <h1 class="font-weight-light">NASA API Data</h1>
+          <p class="pt-3 lead">Listed below are different pieces of data that has come from information released by Nasa's APIs.  You'll find data on near earth objects as well as the most recent picture of earth taken by DSCOVR's EPIC instrument!</p>
         </div>
-      </div>
-<div class="container">
+    </div>
 	<div class="row justify-content-center">
 		<div class="col-md-5 col-sm-12 col-xs-12 p-4 border rounded m-3 shadow-sm animated bounceInLeft">
 			<h3 class="text-center">Hazardous Near Earth Objects</h3>
@@ -28,4 +28,5 @@
 			<a href="/epic"><p class="text-center text-dark">Link to most recent photo taken by EPIC</p></a>
 		</div>
 		</div>
+	</div>
 {% endblock content %}

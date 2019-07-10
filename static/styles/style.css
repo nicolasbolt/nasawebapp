@@ -3,9 +3,12 @@
 }
 
 .bg-color {
-	background-color: #e9ecef;
+	background-color: #fafafa;
 }
 
+.content {
+	background-color: #fafafa;
+}
 .responsive {
 	max-width: 100%;
 	display: block;
